@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins:wght@400;500&display=swap');
+
+*, *::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+}
+
+p{
+    font-family: 'Manrope', sans-serif;
+}
+
+/* nav */
+.wrapper{
+    padding: 0 3rem;
+    padding-top: 3rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #CBC4DA;
+}
+
+.wrapper li{
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+
+.wrapper li a{
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.wrapper li a:hover{
+    color:#000;
+    border-bottom: 2px solid #301269;
+}
+
+.nav-left{
+    display: flex;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-btn{
+    width: 124px;
+    height: 50px;
+    border-radius: 15px;
+    background: #301269;
+    color: #fff;
+}
+
+.nav-btn:hover{
+    background: #fff;
+    color: #301269;
+    border: 1px solid #000;
+}
+/* nav */
+
+/* footer */
+.footer{
+    padding: 5rem 2rem 1rem 2rem;
+    background-color: #301269;
+}
+
+.footer-logo{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a,footer h4, footer p, footer h5{
+    color: #fff;
+}
+.footer .row{
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-subscribe input[type="email"]{
+    border-radius: 15px 0px 0px 15px;
+    height: 48px;
+    width: 300px;
+    padding: 0 16px;
+    color: #fff;
+    background: #301269;
+    border: 2px solid #fff;
+    outline: none;
+}
+
+.subscribe-btn{
+    height: 48px;
+    width: 150px;
+    border-radius: 0px 15px 15px 0px;
+    background: #fff;
+    color: #301269;
+}
+/* footer */
