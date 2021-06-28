@@ -19,7 +19,6 @@ h1,h2,h3,h4,h5,h6{
 a{
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 17px;
     text-decoration: none;
     display: block;
 }
@@ -28,44 +27,63 @@ p{
     font-family: 'Manrope', sans-serif;
 }
 
-/* nav */
-.wrapper{
-    padding: 0 3rem;
-    padding-top: 3rem;
-    padding-bottom: .5rem;
-    border-bottom: 1px solid #CBC4DA;
-}
-
-.wrapper li{
-    display: inline-block;
-    padding: .5rem 1rem;
-}
-
-.wrapper li a{
-    color: #000000;
-    padding-bottom: 5px;
-}
-
-.wrapper li a:hover{
-    color:#000;
-    border-bottom: 2px solid #301269;
-}
-
-.nav-left{
-    display: flex;
-}
-
-.nav-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-btn{
-    width: 124px;
+.cta-btn{
+    width: 150px;
     height: 50px;
     border-radius: 15px;
     background: #301269;
     color: #fff;
+}
+
+.cta-btn:hover{
+    background: #fff;
+    color: #301269;
+}
+
+/* nav */
+.wrapper{
+    background: #e5e5e5;
+    min-width: 100vw;
+}
+
+.wrapper a{
+    font-size: 16px;
+}
+
+
+.wrapper li .nav-lk{
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+.wrapper li .nav-lk:hover{
+    color:#000;
+    border-bottom: 2px solid #301269;
+}
+
+.nav-brand img{
+    width: 150px;
+    height: 20px;
+    background: transparent;
+}
+
+
+.nav-toggler{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: transparent;
+    border: transparent;
+    transition: all 0.3 linear;
+}
+
+.nav-btn{
+    width: 80px;
+    border: 1px solid #000;
+    text-align: center;
+    background: #301269;
+    color: #fff;
+    margin: .5rem 0;
 }
 
 .nav-btn:hover{
@@ -73,7 +91,90 @@ p{
     color: #301269;
     border: 1px solid #000;
 }
+
+
+.nav-toggler img{
+    width: 20px;
+    height: 20px;
+}
+.nav-toggler:hover{
+    transform: rotate(90deg);
+    color: #301269;
+}
+
+
+.links{
+    display: flex;
+    align-items: center;
+    margin-top: .1rem;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links{
+    height: 12.6rem;
+}
+
+.dark{
+    background: #222;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    left: 0;
+    top: 0;
+    opacity: 70%;
+}
+
+@media screen and (min-width: 800px){
+    .wrapper li{
+        display: inline-block;
+        padding: .5rem 1rem;
+    }
+
+    .nav-brand img{
+        width: 200px;
+        height: 30px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .nav-btn{
+        width: 124px;
+        border-radius: 15px;
+        background: #301269;
+        color: #fff;
+        text-align: center;
+        padding: .5rem;
+    }
+
+    .nav-left{
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-toggler{
+        display: none;
+    }
+
+    .links{
+        height: auto;
+        display: flex;
+        margin-top: 1.5rem;
+    }
+}
+
+
 /* nav */
+
 
 /* footer */
 .footer{
@@ -81,14 +182,26 @@ p{
     background-color: #301269;
 }
 
+
 .footer-logo{
-    background: #fff;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo .nav-brand{
+    background: #fff;
+    padding: 1rem;
 }
 
 .footer a,footer h4, footer p, footer h5{
     color: #fff;
+    display: inline;
+}
+
+.footer a:hover{
+   color: #301269;
+   background: #fff;
 }
 .footer .row{
     margin-bottom: 3rem;
@@ -100,12 +213,22 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.footer-bt{
+    justify-content:center;
+    align-items: center;
+}
+
+.copyright{
+    text-align: center;
 }
 
 .cta-subscribe input[type="email"]{
     border-radius: 15px 0px 0px 15px;
     height: 48px;
-    width: 300px;
+    width: 60%;
     padding: 0 16px;
     color: #fff;
     background: #301269;
@@ -115,9 +238,26 @@ p{
 
 .subscribe-btn{
     height: 48px;
-    width: 150px;
+    width: 30%;
     border-radius: 0px 15px 15px 0px;
     background: #fff;
     color: #301269;
 }
-/* footer */
+
+.subscribe-btn:hover{
+    background: #301269;
+    color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+    .cta-subscribe input[type="email"]{
+        height: 48px;
+        width: 300px; 
+    }
+
+    .subscribe-btn{
+        height: 48px;
+        width: 150px;
+    }
+
+}
