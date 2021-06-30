@@ -47,7 +47,7 @@ p{
 }
 
 .wrapper a{
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
@@ -78,12 +78,13 @@ p{
 }
 
 .nav-btn{
-    width: 80px;
     border: 1px solid #000;
     text-align: center;
     background: #301269;
     color: #fff;
     margin: .5rem 0;
+    padding: .8rem .5rem;
+    border-radius: 15px;
 }
 
 .nav-btn:hover{
@@ -105,15 +106,19 @@ p{
 
 .links{
     display: flex;
-    align-items: center;
-    margin-top: .1rem;
+    margin:1rem ;
+    justify-content: center;
     height: 0;
     overflow: hidden;
     transition: all 0.3s linear;
 }
 
+.links ul > *{
+    padding: .7rem;
+}
+
 .show-links{
-    height: 12.6rem;
+    height: 50vh;
 }
 
 .dark{
@@ -130,12 +135,12 @@ p{
 @media screen and (min-width: 800px){
     .wrapper li{
         display: inline-block;
-        padding: .5rem 1rem;
+        padding: .2rem 1rem;
     }
 
     .nav-brand img{
-        width: 200px;
-        height: 30px;
+        width: 219px;
+        height: 26px;
     }
 
     .nav-container{
@@ -169,6 +174,7 @@ p{
         height: auto;
         display: flex;
         margin-top: 1.5rem;
+
     }
 }
 
